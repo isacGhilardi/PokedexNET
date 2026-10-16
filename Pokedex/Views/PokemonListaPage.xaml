@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pokedex.Views.PokemonListaPage"
+             Title="PokemonListaPage">
+    <Grid Padding="16"
+      RowDefinitions="Auto,*"
+      RowSpacing="12">
+
+        <Button Text="Cadastrar Pokémon"
+            Clicked="OnCadastrarClicked" />
+
+        <CollectionView Grid.Row="1"
+                    x:Name="PokemonsCollection"
+                    SelectionMode="None"
+                    EmptyView="Nenhum Pokémon cadastrado.">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                xmlns:models="clr-namespace:Pokedex.Models"
+                x:DataType="models:Pokemon">
+
+                    <Grid Padding="8"
+                      ColumnDefinitions="80,*"
+                      ColumnSpacing="12">
+
+                        <Image Source="{Binding Imagem}"
+                           HeightRequest="72"
+                           Aspect="AspectFit" />
+
+                        <VerticalStackLayout Grid.Column="1"
+                                         VerticalOptions="Center">
+                            <Label Text="{Binding Nome1}"
+                               FontSize="20" />
+                            <Label Text="{Binding Tipo1}"
+                               FontSize="14" />
+                        </VerticalStackLayout>
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>
