@@ -81,7 +81,8 @@ public partial class PokemonCadastroPage : ContentPage
             {
                 Nome1 = NomeEntry.Text.Trim(),
                 Tipo1 = TipoEntry.Text.Trim(),
-                Imagem = ImagemEntry.Text.Trim(),
+                // MAUI converte toda MauiImage para .png no build
+                Imagem = Path.ChangeExtension(ImagemEntry.Text.Trim().ToLowerInvariant(), ".png"),
                 Poderes = nomesPoderes
                     .Select(nome => new Poder { Nome = nome })
                     .ToList()

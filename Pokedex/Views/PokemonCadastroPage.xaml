@@ -2,33 +2,40 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pokedex.Views.PokemonCadastroPage"
-             Title="PokemonCadastroPage">
+             Title="Pokédex">
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="12" BackgroundColor="AliceBlue">
 
             <Label Text="Cadastrar Pokémon"
-               FontSize="24" />
+               FontSize="24" 
+                   TextColor="Black"/>
 
             <Entry x:Name="NomeEntry"
-               Placeholder="Nome" />
+               Placeholder="Nome" 
+                   TextColor="Black"/>
 
             <Entry x:Name="TipoEntry"
-               Placeholder="Tipo: Elétrico, Fogo, Água..." />
+               Placeholder="Tipo: Elétrico, Fogo, Água..." 
+                   TextColor="Black"/>
             
             <Entry x:Name="NumeroEntry"
-               Placeholder="Número: 25" />      
+               Placeholder="Número: 25" 
+                   TextColor="Black"/>      
 
             <Entry x:Name="ImagemEntry"
-               Placeholder="Imagem: pikachu.png" />
+               Placeholder="Imagem: pikachu.png" 
+                   TextColor="Black"/>
 
-            <Label Text="Poderes separados por vírgula" />
+            <Label Text="Poderes separados por vírgula" 
+                   TextColor="Black"/>
             
 
             <Entry x:Name="PoderesEntry"
-               Placeholder="Choque do Trovão, Ataque Rápido" />
+               Placeholder="Choque do Trovão, Ataque Rápido" 
+                   TextColor="Black"/>
 
             <Button x:Name="SalvarButton "
-                BackgroundColor="Aqua"
+                BackgroundColor="BlueViolet"
                     
                 Text="Salvar"
                 Clicked="OnSalvarClicked" />

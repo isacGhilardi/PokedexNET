@@ -11,7 +11,7 @@
 
         <Button Text="Cadastrar Pokémon"
             Clicked="OnCadastrarClicked" 
-            BackgroundColor="AliceBlue"
+            BackgroundColor="BlueViolet"
             TextColor="Black"
                 />
 
@@ -27,12 +27,13 @@
 
                     <Grid Padding="8"
                       ColumnDefinitions="80,*"
-                      ColumnSpacing="12"
+                      ColumnSpacing="20"
                           BackgroundColor="Black">
 
                         <Image Source="{Binding Imagem}"
                            HeightRequest="72"
-                           Aspect="AspectFit" />
+                           Aspect="AspectFit" 
+                               Background="BlueViolet"/>
 
                         <VerticalStackLayout Grid.Column="1"
                                          VerticalOptions="Center">
@@ -40,6 +41,7 @@
                                FontSize="20" />
                             <Label Text="{Binding Tipo1}"
                                FontSize="14" />
+                            
                         </VerticalStackLayout>
 
                     </Grid>
