@@ -8,7 +8,7 @@
 
     <ShellContent
     Title="Pokédex"
-    Route="pokemons"
+    Route="Pokemons"
     ContentTemplate="{DataTemplate views:PokemonListaPage}" />
     
 </Shell>

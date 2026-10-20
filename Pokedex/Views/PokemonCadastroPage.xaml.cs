@@ -18,9 +18,9 @@ public partial class PokemonCadastroPage : ContentPage
         if (sender is not Button button)
             return;
 
-        if (string.IsNullOrWhiteSpace(nomeEntry.Text) ||
-            string.IsNullOrWhiteSpace(tipoEntry.Text) ||
-            !int.TryParse(numeroEntry.Text, out var numero) || numero <= 0)
+        if (string.IsNullOrWhiteSpace(NomeEntry.Text) ||
+            string.IsNullOrWhiteSpace(TipoEntry.Text) ||
+            !int.TryParse(NumeroEntry.Text, out var numero) || numero <= 0)
         {
             await DisplayAlertAsync("Dados inválidos", "Informe o nome, o tipo e um número positivo da Pokédex.", "OK");
             return;
@@ -31,13 +31,13 @@ public partial class PokemonCadastroPage : ContentPage
         {
             await _database.CadastrarAsync(new Pokemon
             {
-                Nome1 = nomeEntry.Text.Trim(),
-                Tipo1 = tipoEntry.Text.Trim(),
+                Nome1 = NomeEntry.Text.Trim(),
+                Tipo1 = TipoEntry.Text.Trim(),
                 Numero = numero
             });
-            nomeEntry.Text = string.Empty;
-            tipoEntry.Text = string.Empty;
-            numeroEntry.Text = string.Empty;
+            NomeEntry.Text = string.Empty;
+            TipoEntry.Text = string.Empty;
+            NumeroEntry.Text = string.Empty;
             await DisplayAlertAsync("Cadastro", "Pokémon cadastrado com sucesso.", "OK");
         }
         catch (Exception)

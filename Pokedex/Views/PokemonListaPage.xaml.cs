@@ -1,9 +1,11 @@
+
 using Pokedex.Data;
 
 namespace Pokedex.Views;
 
 public partial class PokemonListaPage : ContentPage
 {
+
     private readonly PokemonDatabase _database;
 
     public PokemonListaPage(PokemonDatabase database)

@@ -4,7 +4,7 @@
              x:Class="Pokedex.Views.PokemonCadastroPage"
              Title="PokemonCadastroPage">
     <ScrollView>
-        <VerticalStackLayout Padding="24" Spacing="12">
+        <VerticalStackLayout Padding="24" Spacing="12" BackgroundColor="AliceBlue">
 
             <Label Text="Cadastrar Pokémon"
                FontSize="24" />
@@ -14,16 +14,22 @@
 
             <Entry x:Name="TipoEntry"
                Placeholder="Tipo: Elétrico, Fogo, Água..." />
+            
+            <Entry x:Name="NumeroEntry"
+               Placeholder="Número: 25" />      
 
             <Entry x:Name="ImagemEntry"
                Placeholder="Imagem: pikachu.png" />
 
             <Label Text="Poderes separados por vírgula" />
+            
 
             <Entry x:Name="PoderesEntry"
                Placeholder="Choque do Trovão, Ataque Rápido" />
 
-            <Button x:Name="SalvarButton"
+            <Button x:Name="SalvarButton "
+                BackgroundColor="Aqua"
+                    
                 Text="Salvar"
                 Clicked="OnSalvarClicked" />
 
